@@ -1,31 +1,25 @@
-package web;
+package web
 
-import javax.servlet.*;
-import java.io.IOException;
+import java.io.IOException
+import javax.servlet.*
 
-public class ServletDemo implements Servlet {
-    @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
-
+class ServletDemo : Servlet {
+    @Throws(ServletException::class)
+    override fun init(servletConfig: ServletConfig) {
     }
 
-    @Override
-    public ServletConfig getServletConfig() {
-        return null;
+    override fun getServletConfig(): ServletConfig? {
+        return null
     }
 
-    @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("nihaohahaha");
+    @Throws(ServletException::class, IOException::class)
+    override fun service(servletRequest: ServletRequest, servletResponse: ServletResponse) {
+        println("nihaohahaha")
     }
 
-    @Override
-    public String getServletInfo() {
-        return null;
+    override fun getServletInfo(): String? {
+        return null
     }
 
-    @Override
-    public void destroy() {
-
-    }
+    override fun destroy() {}
 }
